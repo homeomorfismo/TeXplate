@@ -1,0 +1,49 @@
+% File name and type
+%   Suggested types are:
+%   article, beamer, standalone, amsart
+\newcommand\DOCTYPE{}
+\newcommand\TITLE{}
+\newcommand\SHORTTITLE{}
+
+% Authors
+\newcommand\AUTHOR{}
+\newcommand\SHORTAUTHOR{}
+\newcommand\INSTRUCTOR{}
+
+% Institutional data
+\newcommand\INSTITUTION{}
+\newcommand\LOGO{}
+
+% Courses data
+\newcommand\TERM{}
+\newcommand\COURSENUMBER{}
+\newcommand\COURSENAME{}
+
+%% Beamer
+\newcommand\THEME{Antibes}
+\newcommand\COLORTHEME{spruce}
+
+%% AMS Article
+% Enviroments
+\newtheorem{thm}{Theorem}
+\newtheorem{pps}{Proposition}
+\newtheorem{lmm}{Lemma}
+\newtheorem{crl}{Corolary}
+\newtheorem*{idea}{Idea}
+\newtheorem{prb}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}[section]
+\newtheorem{exm}{Example}[section]
+\newtheorem{clm}{Claim}[section]
+\newtheorem{tsk}{Task}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{sol}{Solution}
+
+% Delimiters
+\AtEndEnvironment{sol}{\null\hfill\qed}
+\AtEndEnvironment{defi}{\null\hfill\textasteriskcentered}
+\AtEndEnvironment{remark}{\null\hfill\textasteriskcentered}
+\AtEndEnvironment{clm}{\null\hfill\textasteriskcentered}
+\AtEndEnvironment{exm}{\null\hfill\dag}
+\AtEndEnvironment{tsk}{\null\hfill\dag}

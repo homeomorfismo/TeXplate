@@ -1,0 +1,23 @@
+% Enviroments
+\newtheorem{thm}{Theorem}
+\newtheorem{pps}{Proposition}
+\newtheorem{lmm}{Lemma}
+\newtheorem{crl}{Corolary}
+\newtheorem*{idea}{Idea}
+\newtheorem{prb}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}[section]
+\newtheorem{exm}{Example}[section]
+\newtheorem{clm}{Claim}[section]
+\newtheorem{tsk}{Task}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{sol}{Solution}
+
+% Enviroment delimiters
+\AtEndEnvironment{sol}{\null\hfill\qed}
+\AtEndEnvironment{defi}{\null\hfill\textasteriskcentered}
+\AtEndEnvironment{remark}{\null\hfill\textasteriskcentered}
+\AtEndEnvironment{clm}{\null\hfill\textasteriskcentered}
+\AtEndEnvironment{exm}{\null\hfill\dag}
+\AtEndEnvironment{tsk}{\null\hfill\dag}

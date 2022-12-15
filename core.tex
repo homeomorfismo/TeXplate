@@ -1,0 +1,34 @@
+% Main settings
+\input{settings}
+\input{packages}
+\input{preamble}
+\documentclass{\DOCTYPE}
+\author[\SHORTAUTHOR]
+{\AUTHOR\inst{1}}
+\institute
+{\INSTITUTION\inst{1}}
+\date[\year]
+{\today}
+\logo{\includegraphics[width=0.1\textwidth]{\LOGO}}
+
+% if Beamer
+\usetheme{\THEME} 
+\usecolortheme{\COLORTHEME}
+\title[\SHORTTITLE]{\TITLE}
+
+% Document
+\begin{document}
+
+% BEAMER
+%% Title page
+% \frame{\titlepage}
+%% Outline frame
+% \begin{frame}
+% \frametitle{Outline}
+% \tableofcontents
+% \end{frame}
+
+% BIBTEX
+% \bibliographystyle{abbrv}
+% \bibliography{refs}
+\end{document}
