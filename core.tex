@@ -1,39 +1,66 @@
 % Main settings
 \input{settings}
+
+% Beamer
+\ifdefined\BEAMER
+    \ifdefined\OPTIONS
+        \documentclass[\OPTIONS]{\BEAMER}
+    \else
+        \documentclass{\BEAMER}
+    \fi
+    \usetheme{\THEME} 
+    \usecolortheme{\COLORTHEME}
+    \author[\SHORTAUTHOR]{\AUTHOR}
+    \institute{\INSTITUTION}
+\fi
+
+% Article
+\ifdefined\ARTICLE
+    \ifdefined\OPTIONS
+        \documentclass[\OPTIONS]{\ARTICLE}
+    \else
+        \documentclass{\ARTICLE}
+    \fi
+    \author{\AUTHOR}
+\fi
+
+% AMS Article
+\ifdefined\AMSART
+    \ifdefined\OPTIONS
+        \documentclass[\OPTIONS]{\AMSART}
+    \else
+        \documentclass{\AMSART}
+    \fi
+    \author{\AUTHOR}
+    \address{\INSTITUTION}
+    \ifdefined{\THANKS}
+        \thanks{\THANKS}
+    \fi
+\fi
+
 \input{packages}
 \input{preamble}
 
-\ifdefined\BEAMER
-    \documentclass[\OPTIONS]{\BEAMER}
-    \usetheme{\THEME} 
-    \usecolortheme{\COLORTHEME}
+\ifdefined\LOGO
+    \logo{\includegraphics[width=0.1\textwidth]{\LOGO}}
 \fi
-\ifdefined\ARTICLE
-    \documentclass[\OPTIONS]{\ARTICLE}
-\fi
-\ifdefined\AMSART
-    \documentclass[\OPTIONS]{\AMSART}
-\fi
-
-\author[\SHORTAUTHOR]
-{\AUTHOR\inst{1}}
-\institute
-{\INSTITUTION\inst{1}}
-\logo{\includegraphics[width=0.1\textwidth]{\LOGO}}
 
 \ifdefined\COURSENAME
     \title{\large\COURSENUMBER:\\\COURSENAME\\\TITLE}
     \date{\SUBMISSIONDATE}
 \else
     \title[\SHORTTITLE]{\TITLE}
-    \date[\year]
-    {\today}
+    \date{\today}
 \fi
 
 % Document
 \begin{document}
 
-
+% ARTICLE/AMSART
+%% Title page
+% \maketitle
+%% Abstract
+% \begin{abstract}\end{abstract}
 
 % BEAMER
 %% Title page
