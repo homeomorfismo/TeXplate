@@ -1,9 +1,18 @@
 % File name and type
 %   Suggested types are:
 %   article, beamer, standalone, amsart
-\newcommand\DOCTYPE{}
+\newcommand\BEAMER{}
+\newcommand\ARTICLE{}
+\newcommand\AMSART{}
+%\newcommand\DOCTYPE{}
+\newcommand\OPTIONS{}
+\newcommand\LANGUAGE{english}
+
 \newcommand\TITLE{}
 \newcommand\SHORTTITLE{}
+\newcommand\NUMBERING{section}
+% Set to:
+%   section, chapter
 
 % Authors
 \newcommand\AUTHOR{}
@@ -15,35 +24,14 @@
 \newcommand\LOGO{}
 
 % Courses data
-\newcommand\TERM{}
-\newcommand\COURSENUMBER{}
 \newcommand\COURSENAME{}
+\newcommand\COURSENUMBER{}
+\newcommand\TERM{}
+\newcommand\SUBMISSIONDATE{}
 
 %% Beamer
-\newcommand\THEME{Antibes}
-\newcommand\COLORTHEME{spruce}
-
+\ifdefined\BEAMER
+    \newcommand\THEME{Antibes}
+    \newcommand\COLORTHEME{spruce}
+\fi
 %% AMS Article
-% Enviroments
-\newtheorem{thm}{Theorem}
-\newtheorem{pps}{Proposition}
-\newtheorem{lmm}{Lemma}
-\newtheorem{crl}{Corolary}
-\newtheorem*{idea}{Idea}
-\newtheorem{prb}{Problem}
-
-\theoremstyle{definition}
-\newtheorem{defi}{Definition}[section]
-\newtheorem{exm}{Example}[section]
-\newtheorem{clm}{Claim}[section]
-\newtheorem{tsk}{Task}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem*{sol}{Solution}
-
-% Delimiters
-\AtEndEnvironment{sol}{\null\hfill\qed}
-\AtEndEnvironment{defi}{\null\hfill\textasteriskcentered}
-\AtEndEnvironment{remark}{\null\hfill\textasteriskcentered}
-\AtEndEnvironment{clm}{\null\hfill\textasteriskcentered}
-\AtEndEnvironment{exm}{\null\hfill\dag}
-\AtEndEnvironment{tsk}{\null\hfill\dag}

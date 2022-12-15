@@ -2,22 +2,38 @@
 \input{settings}
 \input{packages}
 \input{preamble}
-\documentclass{\DOCTYPE}
+
+\ifdefined\BEAMER
+    \documentclass[\OPTIONS]{\BEAMER}
+    \usetheme{\THEME} 
+    \usecolortheme{\COLORTHEME}
+\fi
+\ifdefined\ARTICLE
+    \documentclass[\OPTIONS]{\ARTICLE}
+\fi
+\ifdefined\AMSART
+    \documentclass[\OPTIONS]{\AMSART}
+\fi
+
 \author[\SHORTAUTHOR]
 {\AUTHOR\inst{1}}
 \institute
 {\INSTITUTION\inst{1}}
-\date[\year]
-{\today}
 \logo{\includegraphics[width=0.1\textwidth]{\LOGO}}
 
-% if Beamer
-\usetheme{\THEME} 
-\usecolortheme{\COLORTHEME}
-\title[\SHORTTITLE]{\TITLE}
+\ifdefined\COURSENAME
+    \title{\large\COURSENUMBER:\\\COURSENAME\\\TITLE}
+    \date{\SUBMISSIONDATE}
+\else
+    \title[\SHORTTITLE]{\TITLE}
+    \date[\year]
+    {\today}
+\fi
 
 % Document
 \begin{document}
+
+
 
 % BEAMER
 %% Title page
